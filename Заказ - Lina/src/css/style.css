@@ -1,17 +1,24 @@
 /* font-family */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;700&display=swap');
+
+@import url(../assets/fonts/SF\ UI/stylesheet.css);
+
+/*
+        font-family: "Montserrat";
+        font-family: "Inter";
+        font-family: "SF UI Display";
+*/
 
 /* basic setting */
 
 body
 {
-    height: 100vh;
-    
     margin: 0 auto;
     background-image: url(../assets/img/Background.png);
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 *{
@@ -168,16 +175,26 @@ ul
 
 .block-1
 {
+    overflow: hidden;
     position: relative;
     height: 836px;
 }
 
 .block1-cont
 {
-    position: absolute;
-    height: 243px;
-    left: 120px;
-    top: 225px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    left: 100px;
+}
+
+.block1-about
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .block1-title
@@ -195,6 +212,7 @@ ul
 .block1-title > span
 {
     color: #2DD64ACC;
+
 }
 
 .block1-subtitle
@@ -211,10 +229,9 @@ ul
 
 .block1-button
 {
-    position: absolute;
-    left: 120px;
-    top: 593px;
-
+    position: relative;
+    padding: 0;    
+    top: 125px;
 
     box-sizing: border-box;
 
@@ -239,21 +256,21 @@ ul
 }
 
 
-.block-1 > ul
+.block-1 > .block1-about > .block1-cont  > ul
 {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 40px;
-
-    left: 100px;
+    padding: 0;
+    top: 209px;
     bottom: 0;
 }
 
 /* Block 2 */
 
-.block-1 > ul > li
+.block-1 > .block1-about > .block1-cont > ul > li
 {
     display: flex;
     flex-direction: column;
@@ -262,14 +279,12 @@ ul
     font-weight: 700;
     font-size: 36px;
     line-height: 43px;
-
-    display: flex;
     align-items: center;
 
     color: rgba(255, 255, 255, 0.75);
 }
 
-.block-1 > ul > li > span
+.block-1 > .block1-about > .block1-cont > ul > li > span
 {
     text-transform: uppercase;
     font-family: 'Montserrat';
@@ -286,10 +301,9 @@ ul
 
 .block1-img
 {
-    position: absolute;
-    right: 40px;
-    top: 224.89px;
-
+    position: relative;
+    left: 67px;
+    top: 115.89px;
 }
 
 
@@ -298,35 +312,37 @@ ul
 .block-2
 {
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 620px;
+}
+
+.block2-tt
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 199px;
+    top: 77px;
+    gap: 4px;
+
 }
 
 
 .block2-suptitle
 {
-    position: absolute;
-
-    top: 77px;
-    left: 120px;
-
     text-transform: uppercase;
     font-family: 'Mntserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-
     color: rgba(45, 214, 74, 0.8);
 }
 
 .block2-title
 {
-    position: absolute;
-
-    top: 100px;
-    left: 120px;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -340,13 +356,12 @@ ul
 
 .block2-about
 {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    left: 120px;
-    top: 208px;
+    left: 0;
+    top: 128px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -375,11 +390,13 @@ ul
 
 .block2-under
 {
-    position: absolute;
-    width: 1200px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
     height: 162px;
-    left: 120px;
-    top: 458px;
+    top: 41%;
 
     background: #1B1C20;
     border-radius: 10px;
@@ -397,7 +414,11 @@ ul
     top: -55px;
 }
 
-
+.block2-under-ul2 > hr
+{
+    position: relative;
+    top: 15%;
+} 
 
 
 .block2-under > .block2-under-ul2 
@@ -437,17 +458,26 @@ ul
 .block-3
 {
     position: relative;
+    display: flex;
+    justify-content: center;
     height: 894px;
+}
+
+.block3-tt
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 198px;
+    height: 0px;
+    top: 77px;
+    gap: 4px;
+
+    z-index: 1;
 }
 
 .block3-suptitle
 {
-    position: absolute;
-    width: 61px;
-    height: 19px;
-    left: 120px;
-    top: 77px;
-
     font-family: 'SF UI Display';
     font-style: normal;
     font-weight: 400;
@@ -459,11 +489,6 @@ ul
 
 .block3-title
 {
-    position: absolute;
-    width: 198px;
-    height: 44px;
-    left: 120px;
-    top: 100px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -496,18 +521,38 @@ ul
     color: rgba(255, 255, 255, 0.8);
 }
 
-.block3-card
+.block3-card4-title
+{
+    position: absolute;
+    width: 267px;
+    height: 20px;
+    left: 24px;
+    top: 24px;
+    padding: 0;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+
+
+
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.block3-cards
 {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    width: 479px;
-    height: 325px;
-    top: 208px;
-    left: 121px;
-
-    background: #1B1C20;
-    border-radius: 10px;
+    gap: 36px;
 }
+
 
 .block3-cards1
 {
@@ -515,18 +560,35 @@ ul
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     gap: 139px;
 }
 
 .block3-cards2
 {
     position: relative;
-
-    top: 36px;
-
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     gap: 139px;
+}
+
+
+
+.block3-card
+{
+    position: relative;
+
+    width: 479px;
+    height: 325px;
+    top: 208px;
+
+    background: #1B1C20;
+    border-radius: 10px;
 }
 
 .block3-card > img 
@@ -693,7 +755,7 @@ ul
 
 .block5-suptitle
 {
-    position: absolute;
+    position: relative;
     width: 66px;
     height: 19px;
     left: 120px;
@@ -710,11 +772,11 @@ ul
 
 .block5-title
 {
-    position: absolute;
+    position: relative;
     width: 471px;
     height: 44px;
     left: 120px;
-    top: 100px;
+    top: 80px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -725,23 +787,171 @@ ul
     color: rgba(255, 255, 255, 0.8);
 }
 
+.block5-slider-wrap
+{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
+    width: 1350px;
+    top: 135px;
+}
+
+.block5-slider
+{
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #fff;
+}
+
+
+.slick-track
+{
+    height: 154px;
+}
+
+
+.slide
+{   
+    position: relative;
+    width: 376px;
+
+    margin: 0 36px;
+
+    background: #1B1C20;
+    backdrop-filter: blur(110px);
+
+    border-radius: 8px;
+}
+
+.slide-head
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-left: 24px;
+    align-items: center;
+    gap: 8px;
+}
+
+.name
+{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.text
+{
+    position: absolute;
+    padding: 0 24px;
+    height: 60px;
+    bottom: 24px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+
+    
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.slide-time
+{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+
+    display: flex;
+    align-items: center;
+
+    color: #878787;
+}
+
+.slide-star
+{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding-left: 50px;
+}
+
+
+.slider-box {
+    position: relative;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    cursor: pointer;
+}
+.prev
+{
+    left: 0;
+}
+.next {
+
+    right: 0;
+}
+
+.photo
+{
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
 
 /* block 6 */
 
 .block-6
 {
     position: relative;
-
+    overflow: hidden;
     height: 878px;
+}
+
+.block6-header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block6-header-title
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 120px;
 }
 
 .block6-suptitle
 {
-    position: absolute;
+    position: relative;
     width: 174px;
     height: 19px;
-    left: 120px;
     top: 77px;
 
     font-family: 'Montserrat';
@@ -755,11 +965,10 @@ ul
 
 .block6-title
 {
-    position: absolute;
+    position: relative;
     width: 435px;
     height: 44px;
-    left: 120px;
-    top: 100px;
+    top: 80px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -775,9 +984,532 @@ ul
 
 .block6-cube
 {
+    position: relative;
+    top: 137.76px;
+    right: 240px;
+}
+
+.block6-about-wrap
+{
+    position: relative;
+    display: block;
+    left: 120px;
+    top: 86px;
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block6-about
+{
     position: absolute;
-    width: 132.08px;
-    height: 115.07px;
-    left: 1067px;
-    top: 106px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.block6-frame1,.block6-frame2,.block6-frame3,.block6-frame4,.block6-frame5,.block6-frame6
+{
+    display: flex;
+    justify-content: center;
+}
+
+.block6-frame-about
+{
+    position: relative;
+    left: 14px;
+    top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.block6-frame1
+{
+    position: relative;
+    left: 0px;
+    top: -1px;
+    
+    width: 246px;
+    height: 111px;
+    
+    background: #1B1C20;
+    border-radius: 10px;
+}
+.block6-frame2
+{
+    position: relative;
+
+    top: 90px;
+
+    width: 369px;
+    height: 126px;
+    
+    background: #1B1C20;
+    border-radius: 10px;
+}
+.block6-frame3
+{
+    position: relative;
+    top: 194px;
+
+    width: 369px;
+    height: 125px;
+    
+    background: #1B1C20;
+    border-radius: 10px;
+}
+.block6-frame4
+{
+    position: relative;
+    left: -784px;
+    top: 298px;
+
+    width: 372px;
+    height: 126px;
+    
+    background: #1B1C20;
+    border-radius: 10px;
+}
+.block6-frame5
+{
+    position: relative;
+    left: -1567px;
+    top: 402px;
+
+    width: 383px;
+    height: 126px;
+
+    background: #1B1C20;
+    border-radius: 10px;
+}
+.block6-frame6
+{
+    position: relative;
+    left: -1542px;
+    top: 566px;
+
+    width: 441px;
+    height: 126px;
+
+    background: #1B1C20;
+    border-radius: 10px;
+}
+
+
+
+.block6-frame1-title
+{
+    position: relative;
+    width: 110px;
+    height: 38px;
+
+
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.block6-frame2-title
+{
+    position: relative;
+    width: 94px;
+    height: 38px;
+
+
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.block6-frame3-title
+{
+    position: relative;
+    width: 116px;
+    height: 38px;
+
+
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.block6-frame4-title
+{
+    position: relative;
+    width: 223px;
+    height: 38px;
+
+
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.block6-frame5-title
+{
+    position: relative;
+    width: 135px;
+    height: 38px;
+
+
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.block6-frame6-title
+{
+    position: relative;
+    width: 270px;
+    height: 38px;
+
+
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.block6-number
+{
+    position: relative;
+    width: 30px;
+    height: 62px;
+    margin-top: 25px;
+    
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 100%;
+
+    color: rgba(255, 255, 255, 0.8);
+    
+    opacity: 0.3;
+}
+
+.block6-frame1-text
+{
+    position: relative;
+    width: 159px;
+    height: 19px;
+
+    
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.block6-frame2-text
+{
+    position: relative;
+    width: 275px;
+    height: 38px;
+
+    
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    /* Text */
+    
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.block6-frame3-text
+{
+    position: relative;
+    width: 275px;
+    height: 38px;
+
+    
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    /* Text */
+    
+    color: rgba(255, 255, 255, 0.5);
+    
+}
+
+.block6-frame4-text
+{
+    position: relative;
+    width: 275px;
+    height: 38px;
+
+    
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    /* Text */
+    
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.block6-frame5-text
+{
+    position: relative;
+    width: 288px;
+    height: 38px;
+
+    
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    /* Text */
+    
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.block6-frame6-text
+{
+    position: relative;
+    width: 345px;
+    height: 38px;
+
+    
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    /* Text */
+    
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+.block6-about-lines1
+{
+    position: relative;
+    top: 67px;
+    width: 82px;
+    height: 86px;
+    margin-left: 14px;
+    margin-right: 12px;
+}
+
+.block6-about-lines2
+{
+    position: relative;
+    top: 170px;
+    width: 78px;
+    height: 48px;
+    margin-left: 16px;
+    margin-right: 14px;
+}
+
+.block6-about-lines3
+{
+    position: absolute;
+    width: 174px;
+    height: 31px;
+    left: 801px;
+    top: 334px;
+}
+
+.block6-about-lines4
+{
+    position: absolute;
+    width: 174px;
+    height: 47px;
+    left: 227px;
+    top: 360px;
+}
+
+.block6-about-lines5
+{
+    position: absolute;
+    width: 174px;
+    height: 89px;
+    left: 220px;
+    top: 540px;
+}
+
+
+.block6-oblako-l
+{
+    position: absolute;
+    left: 15%;
+    right: 81.29%;
+    top: 47.84%;
+    bottom: 46.7%;
+}
+
+.block6-oblako-r
+{
+    position: absolute;
+    left: 78.68%;
+    right: 15.33%;
+    top: 75.97%;
+    bottom: 15.2%;
+}
+
+.block6-oblako-cube-r
+{
+    position: absolute;
+    left: 78.54%;
+    right: 18.44%;
+    top: 80.3%;
+    bottom: 14.13%;
+}
+
+
+
+/* block 7 */
+
+
+.under
+{
+    position: relative;
+
+    height: 200px;
+}
+
+.under > .container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.under > .container > ul
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    top: 50px;
+    left: 120px;
+
+
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: rgba(224, 224, 224, 0.5);
+}
+
+.under > .container > ul > li >  a{
+    color: rgba(224, 224, 224, 0.5);
+}
+
+
+.under-logo
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    top: 63px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 63px;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.under-logo-2
+{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+
+    color: #2DD64A;
+}
+
+
+.under-contact
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 4px;
+    top: 66.25px;
+    right: 120px;  
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19.5px;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.under-social
+{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 26.5px;
+    padding: 0;
+}
+
+.under-email > a,
+.under-number > a
+{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+.hr-under
+{
+    margin-top: 5px;
+    border: 0.1px solid #2DD64A;
+    opacity: 0.7;
 }
